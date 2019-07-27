@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="Group" transform="translate(-522 -118)">
+    <g id="Rectangle_1603"
+        transform="translate(538 127)" fill="#2f8eff" stroke="#707070" stroke-width="1">
+      <rect width="9" height="25" stroke="none"/>
+      <rect x="0.5" y="0.5" width="8" height="24" fill="none"/>
+    </g>
+    <path id="ic_error_48px" d="M24,4A20,20,0,1,0,44,24,20,20,0,0,0,24,4Zm2,30H22V30h4Zm0-8H22V14h4Z" transform="translate(566 162) rotate(180)" fill="#e4e4e4"/>
+  </g>
+</svg>

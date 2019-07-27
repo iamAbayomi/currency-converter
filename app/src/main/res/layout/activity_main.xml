@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/signUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="29dp"
+        android:text="Sign up"
+        android:textColor="#00D998"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/second-cardView"
+        android:layout_width="145dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/pln-text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PLN"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/pln-dropDown"
+                app:layout_constraintHorizontal_bias="0.253"
+
+                app:layout_constraintStart_toEndOf="@id/poland-image"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintVertical_bias="0.64" />
+
+            <ImageView
+                android:id="@+id/poland-image"
+                android:layout_width="28dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_republic_of_poland" />
+
+
+            <ImageView
+                android:id="@+id/pln-dropDown"
+                android:layout_width="37dp"
+                android:layout_height="26dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/pln-text"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.608"
+                app:srcCompat="@drawable/ic_keyboard_arrow_down_black_24dp" />
+
+
+            <Spinner
+                android:id="@+id/spinner"
+                style="@style/SpinnerTheme"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="0dp" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="135dp"
+        android:text="."
+        android:textColor="#00D998"
+        android:textSize="60sp"
+
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="228dp"
+        android:layout_height="121dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="76dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Currency Calculator"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#5C6BC0"
+        android:textSize="48sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu_icon" />
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView4"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        app:cardBackgroundColor="#F0FFFCFC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline2"
+        tools:layout_editor_absoluteY="311dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="280dp"
+                android:layout_height="46dp"
+                android:layout_weight="1"
+                android:background="#F0FFFCFC"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text=" 1" />
+
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="EUR"
+                android:textColor="#898989"
+                android:textSize="20sp"
+
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView3"
+        style="@style/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="28dp"
+        app:cardBackgroundColor="#F0FFFCFC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView4">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="280dp"
+                android:layout_height="47dp"
+                android:layout_weight="1"
+                android:background="#F0FFFCFC"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text=" 4,264820" />
+
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="PLN"
+                android:textColor="#898989"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/first_cardView"
+        android:layout_width="145dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/euro-image"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintBottom_toTopOf="@+id/first-spinner"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/first-spinner"
+                app:layout_constraintVertical_bias="0.571"
+
+                app:srcCompat="@drawable/ic_european_union_round_icon"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <TextView
+                android:id="@+id/eur_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EUR"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/first-spinner"
+                app:layout_constraintEnd_toStartOf="@+id/euro-dropdown"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/euro-image"
+                app:layout_constraintTop_toBottomOf="@+id/first-spinner" />
+
+
+            <ImageView
+                android:id="@+id/euro-dropdown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                app:layout_constraintBottom_toTopOf="@+id/first-spinner"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/first-spinner"
+                app:srcCompat="@drawable/ic_keyboard_arrow_down_black_24dp"
+                tools:layout_editor_absoluteX="100dp" />
+
+
+            <Spinner
+                android:id="@+id/first-spinner"
+                style="@style/SpinnerTheme"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/convert_button"
+        android:layout_width="345dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="54dp"
+        app:cardBackgroundColor="#00D998"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/second-cardView">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Convert"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/info_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="51dp"
+        android:text="@string/market_name"
+        android:textColor="#2F8EFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/convert_button" />
+
+    <ImageView
+        android:id="@+id/info-icon"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="13dp"
+
+        android:layout_marginTop="51dp"
+        app:layout_constraintStart_toEndOf="@+id/info_text"
+        app:layout_constraintTop_toBottomOf="@+id/convert_button"
+        app:srcCompat="@drawable/ic_alert" />
+
+    <ImageView
+        android:id="@+id/menu_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="41dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_sort_black_24dp" />
+
+    <ImageView
+        android:id="@+id/exchange_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_marginBottom="64dp"
+        app:layout_constraintBottom_toTopOf="@id/convert_button"
+        app:layout_constraintEnd_toStartOf="@+id/second-cardView"
+        app:layout_constraintHorizontal_bias="0.564"
+        app:layout_constraintStart_toEndOf="@+id/first_cardView"
+        app:srcCompat="@drawable/ic_exchange_arrows" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/textView2"
+        app:layout_constraintGuide_begin="271dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="301dp" />
+
+
+</android.support.constraint.ConstraintLayout>

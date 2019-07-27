@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Currency-Converter</string>
+    <string name="market_name"><u> Mid-market exchange rate at 13;38 UTC</u></string>
+</resources>
