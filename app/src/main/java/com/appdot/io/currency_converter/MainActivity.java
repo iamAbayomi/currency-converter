@@ -1,30 +1,22 @@
 package com.appdot.io.currency_converter;
 
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.XAxis;
-import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
-import com.github.mikephil.charting.interfaces.dataprovider.LineDataProvider;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 
-import org.json.JSONException;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     LineChart lineChart;
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         List <Entry> cosEntries = new ArrayList<>();  // List to store data-points of cosine curve
 
         // Obtaining data points by using Math.sin and Math.cos functions
-        for( float i = 0; i <1f; i += 0.02f ){
+        for( float i = 0; i <7f; i += 0.02f ){
             sinEntries.add(new Entry(i,(float)Math.sin(i)));
             cosEntries.add(new Entry(i,(float)Math.cos(i)));
         }
@@ -53,7 +45,12 @@ public class MainActivity extends AppCompatActivity {
         cosSet.setCircleColor(Color.GREEN);
         sinSet.setColor(Color.BLUE);
         sinSet.setCircleColor(Color.BLUE);
+
         sinSet.setDrawFilled(true);
+        sinSet.setDrawCircles(false);
+        sinSet.setDrawValues(false);
+
+        sinSet.setMode(LineDataSet.Mode.HORIZONTAL_BEZIER);
 
 
         // Adding each plot data to a List
@@ -62,13 +59,20 @@ public class MainActivity extends AppCompatActivity {
         // Setting datapoints and invalidating chart to update with data points
         lineChart.setData(new LineData(dataSets));
 
-        // lineChart.getXAxis().setEnabled(false);
+         //lineChart.getXAxis().setEnabled(false);
         lineChart.getXAxis().setDrawGridLines(false);
+        lineChart.getXAxis().setDrawAxisLine(true);
+        lineChart.getXAxis().setDrawLabels(true);
+        //lineChart.getXAxis().setla
+        lineChart.getXAxis().setAxisMinimum(0.0f);
+        lineChart.getXAxis().setPosition(XAxis.XAxisPosition.BOTTOM);
 
         lineChart.getAxisLeft().setDrawGridLines(false);
         lineChart.getAxisRight().setDrawGridLines(false);
-
         lineChart.getAxisRight().setEnabled(false);
+        lineChart.getAxisLeft().setDrawLabels(false);
+        lineChart.getAxisLeft().setAxisMinimum(0.0f);
+
 
         //Setting scale in chart
         lineChart.setScaleEnabled(true);
