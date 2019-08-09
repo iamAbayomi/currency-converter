@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Currency-Converter</string>
     <string name="market_name"><u> Mid-market exchange rate at 13;38 UTC</u></string>
+    <string name="gets_rate"><u>Get Rate alerts straight to your email inbox</u></string>
 </resources>

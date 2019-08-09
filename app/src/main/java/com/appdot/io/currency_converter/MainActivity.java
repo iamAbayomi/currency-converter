@@ -3,6 +3,7 @@ package com.appdot.io.currency_converter;
 import android.graphics.Color;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Spinner;
 
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.XAxis;
@@ -17,6 +18,12 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     LineChart lineChart;
+    ArrayList<ItemData> list;
+    Spinner secondSpinner;
+    Spinner firstSpinner;
+    SpinnerAdapter firstAdapter;
+    SpinnerAdapter secondAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +32,14 @@ public class MainActivity extends AppCompatActivity {
 
         //Initializing variable mChart
         lineChart =  findViewById(R.id.chart1);
+        list = new ArrayList<>();
+        secondSpinner = findViewById(R.id.secondSpinner);
+        firstSpinner = findViewById(R.id.firstSpinner);
+        addSpinner();
+        linearChart();
+    }
 
+    public void linearChart(){
         List<Entry> sinEntries = new ArrayList<>(); // List to data-points of sine curve
         List <Entry> cosEntries = new ArrayList<>();  // List to store data-points of cosine curve
 
@@ -59,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         // Setting datapoints and invalidating chart to update with data points
         lineChart.setData(new LineData(dataSets));
 
-         //lineChart.getXAxis().setEnabled(false);
+        //lineChart.getXAxis().setEnabled(false);
         lineChart.getXAxis().setDrawGridLines(false);
         lineChart.getXAxis().setDrawAxisLine(true);
         lineChart.getXAxis().setDrawLabels(true);
@@ -73,6 +87,8 @@ public class MainActivity extends AppCompatActivity {
         lineChart.getAxisLeft().setDrawLabels(false);
         lineChart.getAxisLeft().setAxisMinimum(0.0f);
 
+        lineChart.getData().setHighlightEnabled(false);
+
 
         //Setting scale in chart
         lineChart.setScaleEnabled(true);
@@ -81,6 +97,38 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void addSpinner(){
 
+        ArrayList<ItemData> firstList =new ArrayList<>();
+        ArrayList<ItemData> secondList = new ArrayList<>();
+
+        firstList.add(new ItemData("EUR", R.drawable.ic_european_union));
+        firstList.add( new ItemData("USD",R.drawable.ic_united_states_of_america));
+        firstList.add(new ItemData("AUD", R.drawable.ic_australia));
+        firstList.add(new ItemData("CAD",R.drawable.ic_canada));
+        firstList.add(new ItemData("PLN",R.drawable.ic_republic_of_poland));
+        firstList.add(new ItemData("MXN", R.drawable.ic_mexico));
+
+
+
+
+        firstAdapter = new SpinnerAdapter(this, R.layout.spinner_layout,R.id.txtCurrency,firstList);
+        firstSpinner.setAdapter(firstAdapter);
+
+        secondList.add(new ItemData("PLN",R.drawable.ic_republic_of_poland));
+        secondList.add( new ItemData("USD",R.drawable.ic_united_states_of_america));
+        secondList.add(new ItemData("AUD", R.drawable.ic_australia));
+        secondList.add(new ItemData("CAD",R.drawable.ic_canada));
+        secondList.add(new ItemData("MXN", R.drawable.ic_mexico));
+
+
+
+
+
+        secondAdapter = new SpinnerAdapter(this, R.layout.spinner_layout,R.id.txtCurrency, secondList);
+        secondSpinner.setAdapter(secondAdapter);
+
+
+    }
 
 }

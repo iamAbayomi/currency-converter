@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
-    android:layout_width="wrap_content"
+    android:layout_width="120dp"
     android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/currency_image"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:src="@drawable/ic_european_union_round_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/ic_european_union"
         android:layout_gravity="center_vertical"
+        android:layout_weight="1"
         />
 
     <TextView
@@ -19,6 +21,7 @@
         android:padding="10dp"
         android:text="PLN"
         android:textSize="18sp"
+        android:layout_weight="1"
         android:layout_gravity="center_vertical"
         />
 
